@@ -1,16 +1,33 @@
 .faqsidebar {
     height: 100%;
-    width: 150px;
+    min-width: 30%;
     position: absolute;
-    left: 0;
-    top: 0;
-    padding-top: 40px;
+    right: 0px;
+    top: 0px;
     background-color: lightyellow;
+    z-index: 99999999999;
+}
+
+    .faqsidebar div {
+        padding: 8px;
+        font-size: 12px;
+        display: block;
+        color: black;
     }
-    
-.faqsidebar div {
-    padding: 8px;
-    font-size: 12px;
-    display: block;
-    color: black;
+
+#faqcheckbadge {
+    position: absolute;
+    z-index: 99999999999;
+    top: 20%;
+    right: 0;
+}
+
+#faqcheckbadgeheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+}
+
+#imgelem {
+    cursor: pointer;
 }
