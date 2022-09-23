@@ -17,5 +17,5 @@
       "exclude_matches": ["*://*.github.com/*/*?*", "*://*.github.com/*/*/*"]
     }
   ],
-  "web_accessible_resources": [ "nasapod128x128.png" ]
+  "web_accessible_resources": [ "faqcheck128x128.png" ]
 }

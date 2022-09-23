@@ -9,7 +9,7 @@ var elemdiv = document.createElement('div');
 elemdiv.id = 'imagediv';
 var elem = document.createElement("img");
 elem.id = 'imgelem';
-elem.src = chrome.extension.getURL('nasapod128x128.png');
+elem.src = chrome.extension.getURL('faqcheck128x128.png');
 elem.onclick = showContentBox;
 
 document.getElementById("faqcheckbadge").appendChild(elemdiv);
