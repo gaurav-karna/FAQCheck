@@ -1,19 +1,20 @@
 {
-    "name": "FAQCheck",
-    "version": "1.0",
-    "manifest_version": 2,
-    "description": "An extension to display FAQs for a GitHub repository.",
-    "permissions": [
-        "tabs",
-        "webRequest",
-        "storage",
-        "*://*.github.com/*/*"
-    ],
-    "content_scripts": [
-        {
-            "matches": ["*://*.github.com/*/*"],
-            "js": ["FAQCheck.js"],
-            "css": ["styles.css"]
-        }
-    ]
+  "name": "FAQCheck",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "An extension to display FAQs for a GitHub repository.",
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "storage",
+    "*://*.github.com/*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "*://*.github.com/*/*" ],
+      "js": [ "FAQCheck.js" ],
+      "css": [ "styles.css" ]
+    }
+  ],
+  "web_accessible_resources": [ "nasapod128x128.png" ]
 }
