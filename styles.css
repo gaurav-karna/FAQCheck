@@ -1,19 +1,20 @@
 .faqsidebar {
-    height: 100%;
-    min-width: 30%;
+    height: 40%;
+    max-width: 15%;
     position: absolute;
     right: 0px;
-    top: 0px;
+    top: 20%;
     background-color: lightyellow;
     z-index: 99999999999;
+    overflow-y: scroll;
 }
 
-    .faqsidebar div {
-        padding: 8px;
-        font-size: 12px;
-        display: block;
-        color: black;
-    }
+.faqsidebar div {
+    padding: 8px;
+    font-size: 12px;
+    display: block;
+    color: black;
+}
 
 #faqcheckbadge {
     position: absolute;

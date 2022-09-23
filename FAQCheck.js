@@ -22,6 +22,7 @@ clickToMoveElem.innerHTML += "Click here to move"
 document.getElementById("faqcheckbadge").appendChild(clickToMoveElem);
 
 function showContentBox() {
+    contentBox.style.top = document.getElementById("faqcheckbadge").style.top;
     document.body.prepend(contentBox);
     document.body.removeChild(badge);
 }
@@ -38,17 +39,33 @@ fetch(endpoint)
     .then(json => {
         contentBox.className = 'faqsidebar';
         contentBox.onclick = hideContentBox;
+        titleArea = document.createElement('div');
+        titleContent = document.createElement('h2');
+        titleContent.textContent = `StackOverflow Threads for ${tagName}`;
+        titleArea.appendChild(titleContent);
+        contentBox.appendChild(titleArea);
         for (let i = 0; i < json.items.length; i++) {
             subContent = document.createElement('div');
             titleContent = document.createElement('div');
             linkContent = document.createElement('div');
-            scoreContent = document.createElement('div');
-            titleContent.textContent += json.items[i].title;
-            linkContent.textContent += json.items[i].link;
-            scoreContent.textContent += json.items[i].score;
+            //scoreContent = document.createElement('div');
+            titleValue = document.createElement('h5');
+            titleValue.textContent = json.items[i].title;
+            titleValue.textContent += ` - Score: ${json.items[i].score}`;
+
+            titleContent.appendChild(titleValue);
+            
+            linkValue = document.createElement('a');
+            linkValue.href = json.items[i].link;
+            linkValue.textContent = 'View on StackOverflow.com';
+            linkValue.target = '_blank';
+            linkContent.appendChild(linkValue);
+            
+            //scoreContent.textContent = json.items[i].score;
+            
             subContent.appendChild(titleContent);
             subContent.appendChild(linkContent);
-            subContent.appendChild(scoreContent);
+            //subContent.appendChild(scoreContent);
             contentBox.appendChild(subContent);
         }
     });
